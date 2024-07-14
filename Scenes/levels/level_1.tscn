@@ -1,0 +1,640 @@
+[gd_scene load_steps=15 format=3 uid="uid://cux513wbr20ck"]
+
+[ext_resource type="Script" path="res://Scenes/levels/level_1.gd" id="1_8vekn"]
+[ext_resource type="Texture2D" uid="uid://evk8cpgj3ces" path="res://Assets/Background/Green.png" id="1_svkwr"]
+[ext_resource type="PackedScene" uid="uid://c21tnmdu2y6yn" path="res://Scenes/entities/Player.tscn" id="3_4dnd8"]
+[ext_resource type="Texture2D" uid="uid://b75ce5vucfnw3" path="res://Assets/Terrain/Terrain (16x16).png" id="3_puxvk"]
+[ext_resource type="PackedScene" uid="uid://br3orm0ca865u" path="res://Scenes/entities/Enemy.tscn" id="4_m071h"]
+[ext_resource type="PackedScene" uid="uid://bhceucavtadgb" path="res://Scenes/ui/pause_menu.tscn" id="5_cwr0n"]
+[ext_resource type="PackedScene" uid="uid://b37c51wm0mwc5" path="res://Scenes/entities/start.tscn" id="5_pslm7"]
+[ext_resource type="PackedScene" uid="uid://d3hpyqlnepijn" path="res://Scenes/ui/Level complete.tscn" id="6_dxly5"]
+[ext_resource type="PackedScene" uid="uid://bgoi1p68xjt6g" path="res://Scenes/entities/end.tscn" id="7_drtyi"]
+[ext_resource type="Script" path="res://Scenes/entities/Applelabel.gd" id="7_y77ib"]
+[ext_resource type="PackedScene" uid="uid://bxu6bs6vchs1o" path="res://Scenes/entities/Apple entity.tscn" id="8_lf52i"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w1mys"]
+texture = ExtResource("3_puxvk")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0 = 0
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+6:0/0 = 0
+6:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:0/0/physics_layer_0/angular_velocity = 0.0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:0/0 = 0
+7:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:0/0/physics_layer_0/angular_velocity = 0.0
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:0/0 = 0
+8:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:0/0/physics_layer_0/angular_velocity = 0.0
+8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:0/0 = 0
+9:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:0/0/physics_layer_0/angular_velocity = 0.0
+10:0/0 = 0
+10:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+10:0/0/physics_layer_0/angular_velocity = 0.0
+12:0/0 = 0
+12:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+12:0/0/physics_layer_0/angular_velocity = 0.0
+13:0/0 = 0
+13:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+13:0/0/physics_layer_0/angular_velocity = 0.0
+14:0/0 = 0
+14:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+14:0/0/physics_layer_0/angular_velocity = 0.0
+15:0/0 = 0
+15:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+15:0/0/physics_layer_0/angular_velocity = 0.0
+17:0/0 = 0
+17:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+17:0/0/physics_layer_0/angular_velocity = 0.0
+18:0/0 = 0
+18:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+18:0/0/physics_layer_0/angular_velocity = 0.0
+19:0/0 = 0
+19:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+19:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+3:1/0 = 0
+3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:1/0/physics_layer_0/angular_velocity = 0.0
+4:1/0 = 0
+4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:1/0/physics_layer_0/angular_velocity = 0.0
+6:1/0 = 0
+6:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:1/0/physics_layer_0/angular_velocity = 0.0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:1/0 = 0
+7:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:1/0/physics_layer_0/angular_velocity = 0.0
+7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:1/0 = 0
+8:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:1/0/physics_layer_0/angular_velocity = 0.0
+8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:1/0 = 0
+9:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:1/0/physics_layer_0/angular_velocity = 0.0
+10:1/0 = 0
+10:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+10:1/0/physics_layer_0/angular_velocity = 0.0
+12:1/0 = 0
+12:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+12:1/0/physics_layer_0/angular_velocity = 0.0
+13:1/0 = 0
+13:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+13:1/0/physics_layer_0/angular_velocity = 0.0
+14:1/0 = 0
+14:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+14:1/0/physics_layer_0/angular_velocity = 0.0
+15:1/0 = 0
+15:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+15:1/0/physics_layer_0/angular_velocity = 0.0
+17:1/0 = 0
+17:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+17:1/0/physics_layer_0/angular_velocity = 0.0
+17:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+18:1/0 = 0
+18:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+18:1/0/physics_layer_0/angular_velocity = 0.0
+18:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+19:1/0 = 0
+19:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+19:1/0/physics_layer_0/angular_velocity = 0.0
+19:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+6:2/0 = 0
+6:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:2/0/physics_layer_0/angular_velocity = 0.0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:2/0 = 0
+7:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:2/0/physics_layer_0/angular_velocity = 0.0
+7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:2/0 = 0
+8:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:2/0/physics_layer_0/angular_velocity = 0.0
+8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:2/0 = 0
+13:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+13:2/0/physics_layer_0/angular_velocity = 0.0
+14:2/0 = 0
+14:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+14:2/0/physics_layer_0/angular_velocity = 0.0
+15:2/0 = 0
+15:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+15:2/0/physics_layer_0/angular_velocity = 0.0
+17:2/0 = 0
+17:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+17:2/0/physics_layer_0/angular_velocity = 0.0
+18:2/0 = 0
+18:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+18:2/0/physics_layer_0/angular_velocity = 0.0
+19:2/0 = 0
+19:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+19:2/0/physics_layer_0/angular_velocity = 0.0
+0:4/0 = 0
+0:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:4/0/physics_layer_0/angular_velocity = 0.0
+1:4/0 = 0
+1:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:4/0/physics_layer_0/angular_velocity = 0.0
+2:4/0 = 0
+2:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:4/0/physics_layer_0/angular_velocity = 0.0
+3:4/0 = 0
+3:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:4/0/physics_layer_0/angular_velocity = 0.0
+4:4/0 = 0
+4:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:4/0/physics_layer_0/angular_velocity = 0.0
+6:4/0 = 0
+6:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:4/0/physics_layer_0/angular_velocity = 0.0
+7:4/0 = 0
+7:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:4/0/physics_layer_0/angular_velocity = 0.0
+8:4/0 = 0
+8:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:4/0/physics_layer_0/angular_velocity = 0.0
+9:4/0 = 0
+9:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:4/0/physics_layer_0/angular_velocity = 0.0
+10:4/0 = 0
+10:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+10:4/0/physics_layer_0/angular_velocity = 0.0
+12:4/0 = 0
+12:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+12:4/0/physics_layer_0/angular_velocity = 0.0
+13:4/0 = 0
+13:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+13:4/0/physics_layer_0/angular_velocity = 0.0
+14:4/0 = 0
+14:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+14:4/0/physics_layer_0/angular_velocity = 0.0
+15:4/0 = 0
+15:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+15:4/0/physics_layer_0/angular_velocity = 0.0
+17:4/0 = 0
+17:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+17:4/0/physics_layer_0/angular_velocity = 0.0
+18:4/0 = 0
+18:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+18:4/0/physics_layer_0/angular_velocity = 0.0
+19:4/0 = 0
+19:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+19:4/0/physics_layer_0/angular_velocity = 0.0
+20:4/0 = 0
+20:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+20:4/0/physics_layer_0/angular_velocity = 0.0
+21:4/0 = 0
+21:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+21:4/0/physics_layer_0/angular_velocity = 0.0
+0:5/0 = 0
+0:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:5/0/physics_layer_0/angular_velocity = 0.0
+1:5/0 = 0
+1:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:5/0/physics_layer_0/angular_velocity = 0.0
+2:5/0 = 0
+2:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:5/0/physics_layer_0/angular_velocity = 0.0
+3:5/0 = 0
+3:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:5/0/physics_layer_0/angular_velocity = 0.0
+4:5/0 = 0
+4:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:5/0/physics_layer_0/angular_velocity = 0.0
+6:5/0 = 0
+6:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:5/0/physics_layer_0/angular_velocity = 0.0
+7:5/0 = 0
+7:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:5/0/physics_layer_0/angular_velocity = 0.0
+8:5/0 = 0
+8:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:5/0/physics_layer_0/angular_velocity = 0.0
+9:5/0 = 0
+9:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:5/0/physics_layer_0/angular_velocity = 0.0
+10:5/0 = 0
+10:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+10:5/0/physics_layer_0/angular_velocity = 0.0
+12:5/0 = 0
+12:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+12:5/0/physics_layer_0/angular_velocity = 0.0
+13:5/0 = 0
+13:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+13:5/0/physics_layer_0/angular_velocity = 0.0
+14:5/0 = 0
+14:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+14:5/0/physics_layer_0/angular_velocity = 0.0
+15:5/0 = 0
+15:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+15:5/0/physics_layer_0/angular_velocity = 0.0
+17:5/0 = 0
+17:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+17:5/0/physics_layer_0/angular_velocity = 0.0
+18:5/0 = 0
+18:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+18:5/0/physics_layer_0/angular_velocity = 0.0
+19:5/0 = 0
+19:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+19:5/0/physics_layer_0/angular_velocity = 0.0
+20:5/0 = 0
+20:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+20:5/0/physics_layer_0/angular_velocity = 0.0
+21:5/0 = 0
+21:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+21:5/0/physics_layer_0/angular_velocity = 0.0
+0:6/0 = 0
+0:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:6/0/physics_layer_0/angular_velocity = 0.0
+1:6/0 = 0
+1:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:6/0/physics_layer_0/angular_velocity = 0.0
+2:6/0 = 0
+2:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:6/0/physics_layer_0/angular_velocity = 0.0
+6:6/0 = 0
+6:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:6/0/physics_layer_0/angular_velocity = 0.0
+7:6/0 = 0
+7:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:6/0/physics_layer_0/angular_velocity = 0.0
+8:6/0 = 0
+8:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:6/0/physics_layer_0/angular_velocity = 0.0
+13:6/0 = 0
+13:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+13:6/0/physics_layer_0/angular_velocity = 0.0
+14:6/0 = 0
+14:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+14:6/0/physics_layer_0/angular_velocity = 0.0
+15:6/0 = 0
+15:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+15:6/0/physics_layer_0/angular_velocity = 0.0
+17:6/0 = 0
+17:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+17:6/0/physics_layer_0/angular_velocity = 0.0
+18:6/0 = 0
+18:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+18:6/0/physics_layer_0/angular_velocity = 0.0
+19:6/0 = 0
+19:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+19:6/0/physics_layer_0/angular_velocity = 0.0
+0:8/0 = 0
+0:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:8/0/physics_layer_0/angular_velocity = 0.0
+1:8/0 = 0
+1:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:8/0/physics_layer_0/angular_velocity = 0.0
+2:8/0 = 0
+2:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:8/0/physics_layer_0/angular_velocity = 0.0
+3:8/0 = 0
+3:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:8/0/physics_layer_0/angular_velocity = 0.0
+4:8/0 = 0
+4:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:8/0/physics_layer_0/angular_velocity = 0.0
+6:8/0 = 0
+6:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:8/0/physics_layer_0/angular_velocity = 0.0
+7:8/0 = 0
+7:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:8/0/physics_layer_0/angular_velocity = 0.0
+8:8/0 = 0
+8:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:8/0/physics_layer_0/angular_velocity = 0.0
+9:8/0 = 0
+9:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:8/0/physics_layer_0/angular_velocity = 0.0
+10:8/0 = 0
+10:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+10:8/0/physics_layer_0/angular_velocity = 0.0
+12:8/0 = 0
+12:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+12:8/0/physics_layer_0/angular_velocity = 0.0
+13:8/0 = 0
+13:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+13:8/0/physics_layer_0/angular_velocity = 0.0
+14:8/0 = 0
+14:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+14:8/0/physics_layer_0/angular_velocity = 0.0
+15:8/0 = 0
+15:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+15:8/0/physics_layer_0/angular_velocity = 0.0
+17:8/0 = 0
+17:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+17:8/0/physics_layer_0/angular_velocity = 0.0
+18:8/0 = 0
+18:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+18:8/0/physics_layer_0/angular_velocity = 0.0
+19:8/0 = 0
+19:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+19:8/0/physics_layer_0/angular_velocity = 0.0
+20:8/0 = 0
+20:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+20:8/0/physics_layer_0/angular_velocity = 0.0
+0:9/0 = 0
+0:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:9/0/physics_layer_0/angular_velocity = 0.0
+1:9/0 = 0
+1:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:9/0/physics_layer_0/angular_velocity = 0.0
+2:9/0 = 0
+2:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:9/0/physics_layer_0/angular_velocity = 0.0
+3:9/0 = 0
+3:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:9/0/physics_layer_0/angular_velocity = 0.0
+4:9/0 = 0
+4:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:9/0/physics_layer_0/angular_velocity = 0.0
+6:9/0 = 0
+6:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:9/0/physics_layer_0/angular_velocity = 0.0
+7:9/0 = 0
+7:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:9/0/physics_layer_0/angular_velocity = 0.0
+8:9/0 = 0
+8:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:9/0/physics_layer_0/angular_velocity = 0.0
+9:9/0 = 0
+9:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:9/0/physics_layer_0/angular_velocity = 0.0
+10:9/0 = 0
+10:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+10:9/0/physics_layer_0/angular_velocity = 0.0
+12:9/0 = 0
+12:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+12:9/0/physics_layer_0/angular_velocity = 0.0
+13:9/0 = 0
+13:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+13:9/0/physics_layer_0/angular_velocity = 0.0
+14:9/0 = 0
+14:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+14:9/0/physics_layer_0/angular_velocity = 0.0
+15:9/0 = 0
+15:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+15:9/0/physics_layer_0/angular_velocity = 0.0
+17:9/0 = 0
+17:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+17:9/0/physics_layer_0/angular_velocity = 0.0
+18:9/0 = 0
+18:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+18:9/0/physics_layer_0/angular_velocity = 0.0
+19:9/0 = 0
+19:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+19:9/0/physics_layer_0/angular_velocity = 0.0
+20:9/0 = 0
+20:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+20:9/0/physics_layer_0/angular_velocity = 0.0
+0:10/0 = 0
+0:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:10/0/physics_layer_0/angular_velocity = 0.0
+1:10/0 = 0
+1:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:10/0/physics_layer_0/angular_velocity = 0.0
+2:10/0 = 0
+2:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:10/0/physics_layer_0/angular_velocity = 0.0
+6:10/0 = 0
+6:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:10/0/physics_layer_0/angular_velocity = 0.0
+7:10/0 = 0
+7:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:10/0/physics_layer_0/angular_velocity = 0.0
+8:10/0 = 0
+8:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:10/0/physics_layer_0/angular_velocity = 0.0
+13:10/0 = 0
+13:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+13:10/0/physics_layer_0/angular_velocity = 0.0
+14:10/0 = 0
+14:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+14:10/0/physics_layer_0/angular_velocity = 0.0
+15:10/0 = 0
+15:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+15:10/0/physics_layer_0/angular_velocity = 0.0
+18:10/0 = 0
+18:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+18:10/0/physics_layer_0/angular_velocity = 0.0
+19:10/0 = 0
+19:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+19:10/0/physics_layer_0/angular_velocity = 0.0
+20:10/0 = 0
+20:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+20:10/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_s604e"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_w1mys")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2wg6o"]
+size = Vector2(3632, 52.5)
+
+[node name="Level 1" type="Node"]
+script = ExtResource("1_8vekn")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2280.0
+offset_top = -1112.0
+offset_right = 2288.0
+offset_bottom = 1152.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_svkwr")
+stretch_mode = 1
+
+[node name="TileMap" type="TileMap" parent="."]
+z_index = 1
+position = Vector2(0, 16)
+scale = Vector2(2, 2)
+tile_set = SubResource("TileSet_s604e")
+format = 2
+layer_0/tile_data = PackedInt32Array(589821, 393216, 0, 589822, 458752, 0, 589823, 458752, 0, 524288, 458752, 0, 524289, 458752, 0, 524290, 524288, 0, 655357, 393216, 1, 786429, 393216, 1, 917501, 393216, 1, 983037, 393216, 1, 1048573, 393216, 1, 1114109, 393216, 1, 1179645, 393216, 1, 1245181, 393216, 1, 589826, 524288, 1, 655362, 524288, 1, 720898, 524288, 1, 786434, 524288, 1, 851970, 524288, 1, 917506, 524288, 1, 983042, 524288, 1, 1048578, 524288, 1, 1114114, 524288, 1, 1179650, 524288, 1, 655358, 458752, 1, 720894, 589824, 0, 786430, 458752, 1, 917502, 589824, 0, 983038, 589824, 1, 1048574, 458752, 1, 1114110, 458752, 1, 1179646, 458752, 1, 1245182, 589824, 0, 655359, 458752, 1, 720895, 655360, 0, 786431, 458752, 1, 851967, 458752, 1, 917503, 655360, 0, 983039, 655360, 1, 1048575, 458752, 1, 1114111, 589824, 0, 1179647, 589824, 1, 1245183, 655360, 0, 589824, 589824, 0, 655360, 589824, 1, 720896, 458752, 1, 786432, 589824, 0, 851968, 458752, 1, 917504, 458752, 1, 983040, 458752, 1, 1048576, 655360, 0, 1114112, 655360, 1, 1179648, 458752, 1, 589825, 655360, 0, 655361, 655360, 1, 720897, 458752, 1, 786433, 655360, 0, 851969, 458752, 1, 917505, 458752, 1, 983041, 458752, 1, 1048577, 458752, 1, 1114113, 458752, 1, 1179649, 458752, 1, 851966, 458752, 1, 720893, 393216, 1, 851965, 393216, 1, 655386, 393216, 0, 720922, 393216, 1, 786458, 393216, 1, 851994, 393216, 1, 917530, 393216, 1, 983066, 393216, 1, 1048602, 393216, 1, 1114138, 393216, 1, 1179674, 393216, 1, 1245210, 393216, 1, 1310746, 393216, 1, 655387, 458752, 0, 720923, 458752, 1, 786459, 458752, 1, 851995, 589824, 0, 917531, 589824, 1, 983067, 458752, 1, 1048603, 458752, 1, 1114139, 458752, 1, 1179675, 458752, 1, 1245211, 458752, 1, 1310747, 458752, 1, 655388, 458752, 0, 720924, 458752, 1, 786460, 655360, 0, 851996, 655360, 0, 917532, 655360, 1, 983068, 458752, 1, 1048604, 655360, 0, 1114140, 458752, 1, 1179676, 589824, 0, 1245212, 458752, 1, 1310748, 655360, 0, 655389, 458752, 0, 720925, 458752, 1, 786461, 458752, 1, 851997, 458752, 1, 917533, 458752, 1, 983069, 458752, 1, 1048605, 458752, 1, 1114141, 458752, 1, 1179677, 458752, 1, 1245213, 458752, 1, 1310749, 458752, 1, 589854, 393216, 0, 655390, 393216, 1, 720926, 393216, 1, 786462, 458752, 1, 851998, 458752, 1, 917534, 589824, 0, 983070, 458752, 1, 1048606, 589824, 0, 1114142, 589824, 1, 1179678, 458752, 1, 1245214, 458752, 1, 1310750, 458752, 1, 589855, 458752, 0, 655391, 458752, 1, 720927, 589824, 0, 786463, 589824, 1, 851999, 458752, 1, 917535, 589824, 0, 983071, 589824, 1, 1048607, 655360, 0, 1114143, 655360, 1, 1179679, 458752, 1, 1245215, 458752, 1, 1310751, 589824, 0, 589856, 458752, 0, 655392, 458752, 1, 720928, 655360, 0, 786464, 655360, 1, 852000, 458752, 1, 917536, 655360, 0, 983072, 655360, 1, 1048608, 458752, 1, 1114144, 458752, 1, 1179680, 655360, 0, 1245216, 458752, 1, 1310752, 655360, 0, 589857, 524288, 0, 655393, 524288, 1, 720929, 524288, 1, 786465, 524288, 1, 852001, 524288, 1, 917537, 524288, 1, 983073, 524288, 1, 1048609, 524288, 1, 1114145, 524288, 1, 1179681, 524288, 1, 1245217, 524288, 1, 1310753, 524288, 1, 393234, 393216, 0, 458770, 393216, 1, 524306, 393216, 1, 589842, 393216, 1, 655378, 393216, 1, 720914, 393216, 1, 786450, 393216, 1, 851986, 393216, 1, 917522, 393216, 1, 983058, 393216, 1, 1048594, 393216, 1, 1114130, 393216, 1, 1179666, 393216, 1, 1245202, 393216, 1, 1310738, 393216, 1, 393235, 458752, 0, 458771, 589824, 0, 524307, 589824, 1, 589843, 458752, 1, 655379, 458752, 1, 720915, 589824, 0, 786451, 589824, 1, 851987, 655360, 0, 917523, 458752, 1, 983059, 458752, 1, 1048595, 589824, 0, 1114131, 589824, 1, 1179667, 458752, 1, 1245203, 458752, 1, 1310739, 589824, 0, 393236, 458752, 0, 458772, 655360, 0, 524308, 655360, 1, 589844, 458752, 1, 655380, 589824, 0, 720916, 655360, 0, 786452, 655360, 1, 851988, 458752, 1, 917524, 458752, 1, 983060, 458752, 1, 1048596, 655360, 0, 1114132, 655360, 1, 1179668, 458752, 1, 1245204, 589824, 0, 1310740, 655360, 0, 393237, 524288, 0, 458773, 524288, 1, 524309, 524288, 1, 589845, 524288, 1, 655381, 524288, 1, 720917, 524288, 1, 786453, 524288, 1, 851989, 524288, 1, 917525, 524288, 1, 983061, 524288, 1, 1048597, 524288, 1, 1114133, 524288, 1, 1179669, 524288, 1, 1245205, 524288, 1, 1310741, 524288, 1, 589829, 1114112, 1, 589830, 1245184, 1, 524297, 1114112, 1, 524298, 1245184, 1, 458765, 1114112, 1, 458766, 1245184, 1, 524310, 1245184, 1, 786457, 1114112, 1, 524324, 393216, 0, 589860, 393216, 1, 655396, 393216, 1, 720932, 393216, 1, 786468, 393216, 1, 852004, 393216, 1, 917540, 393216, 1, 983076, 393216, 1, 1048612, 393216, 1, 1114148, 393216, 1, 1179684, 393216, 1, 1245220, 393216, 1, 1310756, 393216, 1, 524325, 458752, 0, 524326, 458752, 0, 524327, 458752, 0, 524328, 458752, 0, 524329, 458752, 0, 524330, 458752, 0, 524331, 458752, 0, 524332, 458752, 0, 524333, 524288, 0, 589869, 524288, 1, 1310757, 458752, 1, 1310758, 589824, 1, 1310759, 655360, 1, 1310760, 458752, 1, 1310761, 655360, 0, 1310762, 458752, 1, 1310763, 589824, 0, 1310764, 655360, 0, 1310765, 524288, 1, 1048620, 458752, 1, 983084, 458752, 1, 917548, 458752, 1, 852012, 458752, 1, 786476, 655360, 1, 720940, 655360, 0, 655404, 458752, 1, 589868, 458752, 1, 589867, 458752, 1, 589866, 458752, 1, 589865, 458752, 1, 589864, 458752, 1, 589863, 458752, 1, 589862, 458752, 1, 589861, 458752, 1, 655397, 458752, 1, 720933, 458752, 1, 786469, 589824, 0, 852005, 589824, 1, 917541, 458752, 1, 983077, 458752, 1, 1048613, 458752, 1, 1114149, 458752, 1, 1179685, 458752, 1, 1245221, 458752, 1, 1245222, 589824, 0, 1179686, 458752, 1, 1114150, 458752, 1, 1048614, 655360, 0, 983078, 458752, 1, 917542, 458752, 1, 852006, 655360, 1, 786470, 655360, 0, 720934, 589824, 1, 655398, 589824, 0, 655399, 655360, 0, 720935, 655360, 1, 786471, 458752, 1, 852007, 458752, 1, 917543, 589824, 0, 983079, 458752, 1, 1048615, 458752, 1, 1114151, 589824, 0, 1179687, 589824, 1, 1245223, 655360, 0, 1245224, 458752, 1, 1179688, 655360, 1, 1114152, 655360, 0, 1048616, 458752, 1, 983080, 458752, 1, 917544, 458752, 1, 852008, 458752, 1, 786472, 458752, 1, 720936, 458752, 1, 655400, 458752, 1, 655401, 589824, 0, 720937, 655360, 0, 786473, 458752, 1, 852009, 589824, 0, 917545, 589824, 1, 983081, 458752, 1, 1048617, 458752, 1, 1114153, 458752, 1, 1179689, 458752, 1, 1245225, 589824, 0, 1245226, 458752, 1, 1179690, 458752, 1, 1114154, 458752, 1, 1048618, 589824, 1, 983082, 589824, 0, 917546, 655360, 1, 852010, 655360, 0, 786474, 458752, 1, 720938, 458752, 1, 655402, 458752, 1, 655403, 458752, 1, 720939, 589824, 0, 786475, 589824, 1, 852011, 458752, 1, 917547, 589824, 0, 983083, 655360, 0, 1048619, 655360, 1, 1114155, 458752, 1, 1179691, 458752, 1, 1245227, 458752, 1, 1245228, 458752, 1, 1179692, 458752, 1, 1114156, 458752, 1, 1114157, 524288, 1, 1048621, 524288, 1, 983085, 524288, 1, 917549, 524288, 1, 852013, 524288, 1, 786477, 524288, 1, 720941, 524288, 1, 655405, 524288, 1, 1179693, 524288, 1, 1245229, 524288, 1, 1310717, 393216, 1, 1310718, 458752, 1, 1310719, 458752, 1, 1245184, 589824, 0, 1245185, 655360, 0, 1245186, 524288, 1, 1441789, 393216, 1, 1507325, 393216, 1, 1572861, 393216, 1, 1638397, 393216, 1, 1703933, 393216, 1, 1769469, 393216, 1, 1835005, 393216, 1, 1900541, 393216, 1, 1966077, 393216, 2, 1441790, 458752, 1, 1507326, 458752, 1, 1572862, 589824, 0, 1638398, 589824, 1, 1703934, 458752, 1, 1769470, 458752, 1, 1835006, 458752, 1, 1900542, 589824, 0, 1966078, 458752, 2, 1441791, 458752, 1, 1507327, 458752, 1, 1572863, 655360, 0, 1638399, 655360, 1, 1703935, 458752, 1, 1769471, 589824, 0, 1835007, 589824, 1, 1900543, 655360, 0, 1966079, 458752, 2, 1376256, 458752, 1, 1441792, 589824, 0, 1507328, 458752, 1, 1572864, 458752, 1, 1638400, 458752, 1, 1703936, 655360, 0, 1769472, 655360, 1, 1835008, 458752, 1, 1900544, 458752, 2, 1376257, 458752, 1, 1441793, 655360, 0, 1507329, 458752, 1, 1572865, 458752, 1, 1638401, 458752, 1, 1703937, 458752, 1, 1769473, 458752, 1, 1835009, 458752, 1, 1900545, 458752, 2, 1376258, 524288, 1, 1441794, 524288, 1, 1507330, 524288, 1, 1572866, 524288, 1, 1638402, 524288, 1, 1703938, 524288, 1, 1769474, 524288, 1, 1835010, 524288, 1, 1900546, 524288, 2, 1376253, 393216, 1, 1376254, 589824, 0, 1376255, 655360, 0, 1310720, 589824, 1, 1310721, 655360, 1, 1310722, 524288, 1, 1376274, 393216, 1, 1441810, 393216, 1, 1507346, 393216, 1, 1572882, 393216, 1, 1638418, 393216, 1, 1703954, 393216, 1, 1769490, 393216, 1, 1835026, 393216, 1, 1900562, 393216, 2, 1376275, 589824, 1, 1441811, 655360, 0, 1507347, 458752, 1, 1572883, 458752, 1, 1638419, 589824, 0, 1703955, 589824, 1, 1769491, 458752, 1, 1835027, 655360, 0, 1900563, 458752, 2, 1376276, 655360, 1, 1441812, 458752, 1, 1507348, 458752, 1, 1572884, 458752, 1, 1638420, 655360, 0, 1703956, 655360, 1, 1769492, 458752, 1, 1835028, 458752, 1, 1900564, 458752, 2, 1376277, 524288, 1, 1441813, 524288, 1, 1507349, 524288, 1, 1572885, 524288, 1, 1638421, 524288, 1, 1703957, 524288, 1, 1769493, 524288, 1, 1835029, 524288, 1, 1900565, 524288, 2, 1376282, 393216, 1, 1441818, 393216, 1, 1507354, 393216, 1, 1572890, 393216, 1, 1638426, 393216, 1, 1703962, 393216, 1, 1769498, 393216, 1, 1835034, 393216, 1, 1376283, 458752, 1, 1441819, 589824, 0, 1507355, 589824, 1, 1572891, 458752, 1, 1638427, 458752, 1, 1703963, 458752, 1, 1769499, 458752, 1, 1835035, 458752, 1, 1376284, 655360, 0, 1441820, 655360, 0, 1507356, 655360, 1, 1572892, 458752, 1, 1638428, 655360, 0, 1703964, 458752, 1, 1769500, 589824, 0, 1835036, 458752, 1, 1376285, 458752, 1, 1441821, 458752, 1, 1507357, 458752, 1, 1572893, 458752, 1, 1638429, 458752, 1, 1703965, 458752, 1, 1769501, 458752, 1, 1835037, 458752, 1, 1376286, 458752, 1, 1441822, 458752, 1, 1507358, 589824, 0, 1572894, 458752, 1, 1638430, 589824, 0, 1703966, 589824, 1, 1769502, 458752, 1, 1835038, 458752, 1, 1376287, 589824, 1, 1441823, 458752, 1, 1507359, 589824, 0, 1572895, 589824, 1, 1638431, 655360, 0, 1703967, 655360, 1, 1769503, 458752, 1, 1835039, 458752, 1, 1376288, 655360, 1, 1441824, 458752, 1, 1507360, 655360, 0, 1572896, 655360, 1, 1638432, 458752, 1, 1703968, 458752, 1, 1769504, 655360, 0, 1835040, 458752, 1, 1376289, 524288, 1, 1441825, 524288, 1, 1507361, 524288, 1, 1572897, 524288, 1, 1638433, 524288, 1, 1703969, 524288, 1, 1769505, 524288, 1, 1835041, 524288, 1, 1900570, 393216, 2, 1900571, 458752, 2, 1900572, 458752, 2, 1900573, 458752, 2, 1900574, 458752, 2, 1900575, 458752, 2, 1900576, 458752, 2, 1900577, 524288, 2, 1376292, 393216, 1, 1441828, 393216, 1, 1507364, 393216, 1, 1572900, 393216, 1, 1638436, 393216, 1, 1703972, 393216, 1, 1769508, 393216, 1, 1835044, 393216, 1, 1900580, 393216, 2, 1376293, 589824, 0, 1441829, 589824, 1, 1507365, 458752, 1, 1572901, 458752, 1, 1638437, 458752, 1, 1703973, 458752, 1, 1769509, 458752, 1, 1835045, 458752, 1, 1900581, 458752, 2, 1376294, 655360, 0, 1441830, 655360, 1, 1507366, 458752, 1, 1572902, 458752, 1, 1638438, 655360, 0, 1703974, 458752, 1, 1769510, 458752, 1, 1835046, 458752, 1, 1900582, 458752, 2, 1376295, 458752, 1, 1441831, 458752, 1, 1507367, 589824, 0, 1572903, 458752, 1, 1638439, 458752, 1, 1703975, 589824, 0, 1769511, 589824, 1, 1835047, 458752, 1, 1900583, 458752, 2, 1376296, 458752, 1, 1441832, 458752, 1, 1507368, 458752, 1, 1572904, 458752, 1, 1638440, 458752, 1, 1703976, 655360, 0, 1769512, 655360, 1, 1835048, 458752, 1, 1900584, 458752, 2, 1376297, 458752, 1, 1441833, 589824, 0, 1507369, 589824, 1, 1572905, 458752, 1, 1638441, 458752, 1, 1703977, 458752, 1, 1769513, 458752, 1, 1835049, 458752, 1, 1900585, 458752, 2, 1376298, 458752, 1, 1441834, 655360, 0, 1507370, 655360, 1, 1572906, 589824, 0, 1638442, 589824, 1, 1703978, 458752, 1, 1769514, 458752, 1, 1835050, 458752, 1, 1900586, 458752, 2, 1376299, 589824, 1, 1441835, 458752, 1, 1507371, 589824, 0, 1572907, 655360, 0, 1638443, 655360, 1, 1703979, 458752, 1, 1769515, 458752, 1, 1835051, 458752, 1, 1900587, 458752, 2, 1376300, 655360, 1, 1441836, 458752, 1, 1507372, 458752, 1, 1572908, 458752, 1, 1638444, 458752, 1, 1703980, 458752, 1, 1769516, 458752, 1, 1835052, 458752, 1, 1900588, 458752, 2, 1376301, 524288, 1, 1441837, 524288, 1, 1507373, 524288, 1, 1572909, 524288, 1, 1638445, 524288, 1, 1703981, 524288, 1, 1769517, 524288, 1, 1835053, 524288, 1, 1900589, 524288, 2, 262170, 1114112, 1, 262171, 1179648, 1, 262172, 1245184, 1, 196640, 1114112, 1, 196641, 1179648, 1, 196642, 1179648, 1, 196643, 1179648, 1, 196644, 1179648, 1, 196645, 1179648, 1, 196646, 1179648, 1, 196647, 1179648, 1, 196648, 1179648, 1, 196649, 1179648, 1, 196650, 1179648, 1, 196651, 1179648, 1, 458810, 393216, 0, 524346, 393216, 1, 589882, 393216, 1, 655418, 393216, 1, 720954, 393216, 1, 786490, 393216, 1, 852026, 393216, 1, 917562, 393216, 1, 983098, 393216, 1, 1048634, 393216, 1, 1114170, 393216, 1, 1179706, 393216, 1, 1245242, 393216, 1, 1310778, 393216, 1, 1376314, 393216, 1, 1441850, 393216, 1, 1507386, 393216, 1, 1572922, 393216, 1, 1638458, 393216, 1, 1703994, 393216, 1, 1769530, 393216, 1, 1835066, 393216, 1, 1900602, 393216, 2, 458811, 458752, 0, 524347, 458752, 1, 589883, 589824, 0, 655419, 589824, 1, 720955, 655360, 0, 786491, 458752, 1, 852027, 458752, 1, 917563, 589824, 0, 983099, 589824, 1, 1048635, 458752, 1, 1114171, 655360, 0, 1179707, 458752, 1, 1245243, 458752, 1, 1310779, 655360, 0, 1376315, 458752, 1, 1441851, 458752, 1, 1507387, 589824, 0, 1572923, 589824, 1, 1638459, 458752, 1, 1703995, 655360, 0, 1769531, 458752, 1, 1835067, 458752, 1, 1900603, 458752, 2, 458812, 458752, 0, 524348, 458752, 1, 589884, 655360, 0, 655420, 655360, 1, 720956, 458752, 1, 786492, 589824, 0, 852028, 458752, 1, 917564, 655360, 0, 983100, 655360, 1, 1048636, 458752, 1, 1114172, 458752, 1, 1179708, 589824, 0, 1245244, 458752, 1, 1310780, 458752, 1, 1376316, 589824, 0, 1441852, 458752, 1, 1507388, 655360, 0, 1572924, 655360, 1, 1638460, 458752, 1, 1703996, 458752, 1, 1769532, 589824, 0, 1835068, 458752, 1, 1900604, 458752, 2, 458813, 524288, 0, 524349, 524288, 1, 589885, 524288, 1, 655421, 524288, 1, 720957, 524288, 1, 786493, 524288, 1, 852029, 524288, 1, 917565, 524288, 1, 983101, 524288, 1, 1048637, 524288, 1, 1114173, 524288, 1, 1179709, 524288, 1, 1245245, 524288, 1, 1310781, 524288, 1, 1376317, 524288, 1, 1441853, 524288, 1, 1507389, 524288, 1, 1572925, 524288, 1, 1638461, 524288, 1, 1703997, 524288, 1, 1769533, 524288, 1, 1835069, 524288, 1, 1900605, 524288, 2, 196652, 1179648, 1, 196653, 1179648, 1, 196654, 1179648, 1, 196655, 1245184, 1, 393269, 1114112, 1, 393270, 1245184, 1, 589881, 1179648, 1, 655406, 1179648, 1, 655407, 1245184, 1, 458800, 1114112, 1, 458801, 1245184, 1, 589880, 1179648, 1, 589879, 1114112, 1, 655411, 1114112, 1, 655412, 1245184, 1)
+
+[node name="Border" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border"]
+position = Vector2(984, 480)
+shape = SubResource("RectangleShape2D_2wg6o")
+
+[node name="Apple1" parent="." instance=ExtResource("8_lf52i")]
+position = Vector2(320, 240)
+scale = Vector2(2, 2)
+
+[node name="Apple2" parent="." instance=ExtResource("8_lf52i")]
+position = Vector2(456, 216)
+scale = Vector2(2, 2)
+
+[node name="Apple3" parent="." instance=ExtResource("8_lf52i")]
+position = Vector2(192, 280)
+scale = Vector2(2, 2)
+
+[node name="Apple4" parent="." instance=ExtResource("8_lf52i")]
+position = Vector2(632, 184)
+scale = Vector2(2, 2)
+
+[node name="Apple5" parent="." instance=ExtResource("8_lf52i")]
+position = Vector2(904, 296)
+scale = Vector2(2, 2)
+
+[node name="Apple6" parent="." instance=ExtResource("8_lf52i")]
+position = Vector2(880, 122)
+scale = Vector2(2, 2)
+
+[node name="Apple7" parent="." instance=ExtResource("8_lf52i")]
+position = Vector2(1056, 86)
+scale = Vector2(2, 2)
+
+[node name="Apple8" parent="." instance=ExtResource("8_lf52i")]
+position = Vector2(1112, 86)
+scale = Vector2(2, 2)
+
+[node name="Apple9" parent="." instance=ExtResource("8_lf52i")]
+position = Vector2(1168, 86)
+scale = Vector2(2, 2)
+
+[node name="Apple10" parent="." instance=ExtResource("8_lf52i")]
+position = Vector2(1223, 86)
+scale = Vector2(2, 2)
+
+[node name="Apple11" parent="." instance=ExtResource("8_lf52i")]
+position = Vector2(1277, 86)
+scale = Vector2(2, 2)
+
+[node name="Apple12" parent="." instance=ExtResource("8_lf52i")]
+position = Vector2(1377, 86)
+scale = Vector2(2, 2)
+
+[node name="Apple16" parent="." instance=ExtResource("8_lf52i")]
+position = Vector2(1427, 86)
+scale = Vector2(2, 2)
+
+[node name="Apple17" parent="." instance=ExtResource("8_lf52i")]
+position = Vector2(1480, 86)
+scale = Vector2(2, 2)
+
+[node name="Apple18" parent="." instance=ExtResource("8_lf52i")]
+position = Vector2(1724, 183)
+scale = Vector2(2, 2)
+
+[node name="Apple19" parent="." instance=ExtResource("8_lf52i")]
+position = Vector2(1568, 217)
+scale = Vector2(2, 2)
+
+[node name="Apple14" parent="." instance=ExtResource("8_lf52i")]
+position = Vector2(1209, 245)
+scale = Vector2(2, 2)
+
+[node name="Apple15" parent="." instance=ExtResource("8_lf52i")]
+position = Vector2(1273, 245)
+scale = Vector2(2, 2)
+
+[node name="Apple13" parent="." instance=ExtResource("8_lf52i")]
+position = Vector2(1328, 86)
+scale = Vector2(2, 2)
+
+[node name="Enemy" parent="." instance=ExtResource("4_m071h")]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(1416, 239)
+scale = Vector2(2, 2)
+
+[node name="Start" parent="." instance=ExtResource("5_pslm7")]
+z_index = 2
+position = Vector2(-32, 212)
+scale = Vector2(2, 2)
+
+[node name="End" parent="." instance=ExtResource("7_drtyi")]
+z_index = 2
+position = Vector2(1946, 196)
+scale = Vector2(1.5, 1.5)
+
+[node name="Player" parent="." instance=ExtResource("3_4dnd8")]
+z_index = 1
+position = Vector2(24, 232)
+scale = Vector2(2, 2)
+
+[node name="Main Camera" type="Camera2D" parent="Player"]
+
+[node name="Pause Menu" parent="Player/Main Camera" instance=ExtResource("5_cwr0n")]
+visible = false
+z_index = 3
+scale = Vector2(0.74, 0.74)
+
+[node name="Level complete" parent="Player/Main Camera" instance=ExtResource("6_dxly5")]
+visible = false
+z_index = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+scale = Vector2(0.65, 0.65)
+
+[node name="Apples" type="Label" parent="Player/Main Camera"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -137.5
+offset_top = -217.0
+offset_right = 137.5
+offset_bottom = -175.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 28
+text = "Apples Collected  :  "
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_y77ib")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="area_entered" from="Border" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Border" to="." method="_on_area_2d_body_entered"]

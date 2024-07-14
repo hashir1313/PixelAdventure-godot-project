@@ -1,2 +1,3 @@
 # Pixel Adventure
- A 2d platformer game made in godot.
+
+ A 2d platformer game made in godot by Muhammad Hashir.

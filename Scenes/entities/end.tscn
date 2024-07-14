@@ -1,0 +1,103 @@
+[gd_scene load_steps=13 format=3 uid="uid://bgoi1p68xjt6g"]
+
+[ext_resource type="Script" path="res://Scenes/entities/end.gd" id="1_1xuu8"]
+[ext_resource type="Texture2D" uid="uid://dtbyojgx1e6g7" path="res://Assets/Items/Checkpoints/End/End (Pressed) (64x64).png" id="2_epqas"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpoie"]
+atlas = ExtResource("2_epqas")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ix1ee"]
+atlas = ExtResource("2_epqas")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3usyq"]
+atlas = ExtResource("2_epqas")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y7kuf"]
+atlas = ExtResource("2_epqas")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xv0ve"]
+atlas = ExtResource("2_epqas")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tm213"]
+atlas = ExtResource("2_epqas")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7j7o0"]
+atlas = ExtResource("2_epqas")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1n6r"]
+atlas = ExtResource("2_epqas")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3m1no"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpoie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ix1ee")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3usyq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y7kuf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xv0ve")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tm213")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7j7o0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1n6r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oc60f"]
+size = Vector2(46, 44)
+
+[node name="End" type="Area2D"]
+script = ExtResource("1_1xuu8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_3m1no")
+autoplay = "default"
+frame = 5
+frame_progress = 0.674075
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_oc60f")
+
+[node name="Collect all apples" type="Label" parent="."]
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -108.5
+offset_top = -82.0
+offset_right = 108.5
+offset_bottom = -46.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 26
+text = "Collect 19 apples."
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

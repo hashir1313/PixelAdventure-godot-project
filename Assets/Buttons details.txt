@@ -1,0 +1,3 @@
+color 1 = pich white
+color 2 = 9e9e9e
+color 3 = 333333
