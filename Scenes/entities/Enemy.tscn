@@ -144,10 +144,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6h62h"]
-size = Vector2(21, 28)
+size = Vector2(29, 26)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wpysb"]
-size = Vector2(23, 7)
+size = Vector2(23, 6)
 
 [node name="Enemy" type="CharacterBody2D"]
 script = ExtResource("1_08uik")
@@ -161,14 +161,14 @@ frame_progress = 0.516618
 visible = false
 polygon = PackedVector2Array(-4, -14, -7, -11, -8, -11, -9, -10, -9, -8, -8, -7, -8, -6, -9, -5, -9, -3, -10, -3, -10, 2, -9, 2, -9, 4, -8, 5, -8, 6, -9, 7, -10, 8, -10, 10, -9, 11, -7, 11, -7, 15, -6, 16, -4, 16, -1, 13, 3, 13, 3, 15, 4, 16, 6, 16, 8, 14, 8, 11, 10, 11, 10, 10, 11, 10, 11, 8, 10, 8, 10, 7, 9, 7, 9, 5, 10, 5, 11, 4, 11, -6, 12, -6, 14, -8, 14, -10, 13, -11, 11, -11, 11, -12, 9, -14, 8, -14, 7, -13, 6, -13, 5, -14, 4, -14, 3, -13, 2, -13, 1, -14, 0, -14, -1, -13, -2, -13, -3, -14)
 
-[node name="left" type="RayCast2D" parent="."]
-position = Vector2(-10, 0)
-rotation = 1.5708
+[node name="Left" type="RayCast2D" parent="."]
+position = Vector2(12, 0)
+rotation = -1.5708
 target_position = Vector2(0, 10)
 
-[node name="right" type="RayCast2D" parent="."]
-position = Vector2(13, 1)
-rotation = -1.5708
+[node name="Right" type="RayCast2D" parent="."]
+position = Vector2(-10, 0)
+rotation = 1.5708
 target_position = Vector2(0, 10)
 
 [node name="left down" type="RayCast2D" parent="."]
@@ -183,14 +183,14 @@ target_position = Vector2(0, 22)
 visible = false
 
 [node name="CollisionShape2D1" type="CollisionShape2D" parent="Hitbox"]
-position = Vector2(0.5, 2)
+position = Vector2(1.5, 3)
 shape = SubResource("RectangleShape2D_6h62h")
 
 [node name="death hitbox" type="Area2D" parent="."]
 visible = false
 
 [node name="CollisionShape2D1" type="CollisionShape2D" parent="death hitbox"]
-position = Vector2(2.5, -11.5)
+position = Vector2(1.5, -12)
 shape = SubResource("RectangleShape2D_wpysb")
 metadata/_edit_group_ = true
 

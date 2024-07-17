@@ -7,9 +7,14 @@ func _ready():
 	applescollected = 0
 
 func _process(delta):
-	self.text = "Apples Collected : " + str(applescollected)
-	if applescollected == level.max_apples or applescollected > level.max_apples:
-		self.text = "All apples collected!"
+	if level.oranges == false:
+		self.text = "Apples Collected : " + str(applescollected)
+		if applescollected == level.max_apples :
+					self.text = "All apples collected!"
+	if level.oranges == true:
+		self.text = "Oranges Collected : " + str(applescollected)
+		if applescollected == level.max_apples :
+					self.text = "All Oranges collected!"
 
-func applecollected():
-	applescollected += 1
+func collected():
+		applescollected += 1

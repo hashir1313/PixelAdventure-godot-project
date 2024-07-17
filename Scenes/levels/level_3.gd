@@ -4,19 +4,19 @@ extends Node
 @onready var pause_menu = $"Player/Main Camera/Pause Menu"
 @onready var collect_all_apples = $"End/Collect all apples"
 @onready var item_label = $"Player/Main Camera/Item label"
-@onready var end = $End
 var paused = false
 var level_comp = false
-var oranges = false
-var max_apples = 28
+var oranges = true
+var max_apples = 16
 
 func _ready():
+	
 	player.show()
 	item_label.show()
 	pause_menu.hide()
 	level_complete.hide()
 	Engine.time_scale = 1
-
+	
 func _process(delta):
 	if Input.is_action_just_pressed("pause"):
 		pausemenu()

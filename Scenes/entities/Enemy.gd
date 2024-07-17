@@ -1,30 +1,27 @@
 extends CharacterBody2D
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var level = $".."
-var speed = 80
+@onready var left = $Left
+@onready var right = $Right
+var speed = 100
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var facing_right = true
 
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
-	
-	if $left.is_colliding():
-		var collider = $left.get_collider()
+	if left.is_colliding():
+		var collider = left.get_collider()
 		if collider.name.begins_with("Enemy"):
 			flip()
-	
-	if $right.is_colliding():
-		var collider = $right.get_collider()
+	if right.is_colliding():
+		var collider = right.get_collider()
 		if collider.name.begins_with("Enemy"):
 			flip()
-	
 	if !$"left down".is_colliding() && is_on_floor():
 		flip()
-	
 	if !$"right down".is_colliding() && is_on_floor():
 		flip()
-	
 	velocity.x = speed
 	move_and_slide()
 

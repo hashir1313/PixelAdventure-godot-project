@@ -1,30 +1,31 @@
 extends Node
+
 @onready var label = $"Collect all apples"
-@onready var apples = $"../Player/Main Camera/Apples"
+@onready var item_label = $"../Player/Main Camera/Item label"
 @onready var level = $".."
-var label_shown
 
 func _ready():
-	label_shown = false
-	label.text = "Collect " + str(level.max_apples) + " Apples!"
+	_update_label_text()
 	label.hide()
 
 func _process(delta):
+	if level.level_comp:
+		label.hide()
 	if level.paused:
 		label.hide()
-	if level.level_comp == true :
-		label.hide()
-	else:
-		if label_shown:
-			label.show()
-		else:
-			label.hide()
 
 func _on_body_entered(body):
 	if body.name == "Player":
-		if apples.applescollected == level.max_apples:
-			if label_shown:
-				label.hide()
+		if item_label.applescollected == level.max_apples:
 			level.levelcomplete()
+			label.hide()
 		else:
-			label_shown = true
+			label.show()
+
+func _update_label_text():
+	if level.oranges == true:
+		label.text = "Collect " + str(level.max_apples) + " Oranges!"
+	else:
+		label.text = "Collect " + str(level.max_apples) + " Apples!"
+	
+
